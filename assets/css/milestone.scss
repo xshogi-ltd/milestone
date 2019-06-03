@@ -1,0 +1,110 @@
+﻿@import "basic.scss";
+
+#milestone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .clock {
+        background-color: $theme;
+        padding: 0.5rem;
+        border-radius: 50%;
+        width: fit-content;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .i-clock {
+        width: 50px;
+    }
+
+    .content {
+        background-color: $content;
+        padding: 0.5rem;
+        width: fit-content;
+        color: #ffffff;
+        border-radius: 3px;
+        min-width: 200px;
+    }
+
+    .arrow-left {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 12px 8px 0;
+        border-color: transparent $content transparent transparent;
+    }
+
+    li {
+        display: flex;
+        align-items: Center;
+        justify-content: flex-start;
+
+        & > div {
+            min-width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .linear {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: "";
+            border: 2px solid red;
+            width: 3px;
+            height: 60px;
+        }
+
+        &.before:before {
+            border: 2px dotted red;
+        }
+
+        .date-box {
+            position: absolute;
+            right: 1rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+    }
+
+    .circle {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        border: 2px solid #f6511d;
+        position: absolute;
+        background-color: #fff;
+    }
+
+    .text {
+        color: #929294;
+    }
+
+    .date {
+        font-size: 0.75rem;
+        color: #535358;
+        font-weight: 600;
+    }
+
+    .year {
+        font-size: 0.7rem;
+    }
+
+    .header {
+        margin-left: 0.75rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
